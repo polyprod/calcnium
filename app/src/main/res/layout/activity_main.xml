@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:background="@drawable/sky_5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="cursive"
+        android:text="@string/title"
+        android:textAllCaps="false"
+        android:textColor="#FFA000"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Calcnium" />
+
+    <TextView
+        android:id="@+id/textWithReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="With 8.46 % in annual return:" />
+
+    <TextView
+        android:id="@+id/amountWithReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWithReturn"
+        tools:text="$100 000 000" />
+
+    <TextView
+        android:id="@+id/textWithoutReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountWithReturn"
+        tools:text="Or under the mattress..." />
+
+    <TextView
+        android:id="@+id/amountWithoutReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWithoutReturn"
+        tools:text="$1 000 000" />
+
+    <RelativeLayout
+        android:id="@+id/seekbar_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/seekbar_border"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/switchCurrency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountWithoutReturn">
+
+        <TextView
+            android:id="@+id/textStartupCapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@id/amountStartupCapital"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Startup capital" />
+
+        <TextView
+            android:id="@+id/amountStartupCapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="$300 000" />
+
+        <SeekBar
+            android:id="@+id/barStartupCapital"
+            style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textStartupCapital"
+            android:layout_marginBottom="40dp"
+            android:progress="10"
+            android:thumb="@drawable/custom_thumb"
+            android:thumbTint="#ffffff" />
+
+        <TextView
+            android:id="@+id/textMonthlySavings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/barMonthlySavings"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@id/amountMonthlySavings"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Monthly savings" />
+
+        <TextView
+            android:id="@+id/amountMonthlySavings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/barMonthlySavings"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="$15 000" />
+
+        <SeekBar
+            android:id="@+id/barMonthlySavings"
+            style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barStartupCapital"
+            android:layout_marginBottom="40dp"
+            android:progress="11"
+            android:thumb="@drawable/custom_thumb"
+            android:thumbTint="#ffffff" />
+
+        <TextView
+            android:id="@+id/textAmountOfYears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/barAmountOfYears"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@id/amountAmountOfYears"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Amount of years" />
+
+        <TextView
+            android:id="@+id/amountAmountOfYears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/barAmountOfYears"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="28 years" />
+
+        <SeekBar
+            android:id="@+id/barAmountOfYears"
+            style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/barMonthlySavings"
+            android:progress="29"
+            android:thumb="@drawable/custom_thumb"
+            android:thumbTint="#ffffff" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textOff="@string/sek"
+        android:textOn="@string/usd"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:thumb="@drawable/switch_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_border"
+        app:showText="true"
+        app:track="@drawable/switch_track" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

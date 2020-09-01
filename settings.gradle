@@ -1,0 +1,2 @@
+rootProject.name='calcnium_refactoring'
+include ':app'
